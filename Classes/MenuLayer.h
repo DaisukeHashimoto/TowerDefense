@@ -25,6 +25,7 @@ class MenuLayer : public CCLayer, public CCBSelectorResolver
     void tappedDeckButton(CCObject* pSender, CCControlEvent pCCControlEvent);
     
 public:
+    static void init_page();
     CCB_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(MenuLayer, create);
 };
 

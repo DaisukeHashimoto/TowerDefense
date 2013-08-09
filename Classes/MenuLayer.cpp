@@ -7,7 +7,26 @@
 //
 
 #include "MenuLayer.h"
-#include "BattleLayerLoader.h"
+#include "BattleLayer.h"
+#include "MenuLayerLoader.h"
+
+void MenuLayer::init_page()
+{
+    // cocos builder 読み込み
+    CCNodeLoaderLibrary* ccNodeLoaderLibrary = CCNodeLoaderLibrary::newDefaultCCNodeLoaderLibrary();
+    ccNodeLoaderLibrary->registerCCNodeLoader("MenuLayer", MenuLayerLoader::loader());
+    CCBReader* ccbReader = new CCBReader(ccNodeLoaderLibrary);
+    CCNode* node = ccbReader->readNodeGraphFromFile("MenuLayer.ccbi");
+    
+    CCScene* pScene = CCScene::create();
+    if (node != NULL) {
+        pScene->addChild(node);
+    }
+    ccbReader->release();
+    
+    // run
+    CCDirector::sharedDirector()->replaceScene(pScene);
+}
 
 SEL_MenuHandler MenuLayer::onResolveCCBCCMenuItemSelector(CCObject* pTarget, const char* pSelectorName)
 {
@@ -21,20 +40,8 @@ void MenuLayer::tappedBattleButton(CCObject* pSender, CCControlEvent pCCControlE
 {
     CCLOG("tappedBattleButton");
     
-    // cocos builder 読み込み
-    CCNodeLoaderLibrary* ccNodeLoaderLibrary = CCNodeLoaderLibrary::newDefaultCCNodeLoaderLibrary();
-    ccNodeLoaderLibrary->registerCCNodeLoader("BattleLayer", BattleLayerLoader::loader());
-    CCBReader* ccbReader = new CCBReader(ccNodeLoaderLibrary);
-    CCNode* node = ccbReader->readNodeGraphFromFile("BattleLayer.ccbi");
-    
-    CCScene* pScene = CCScene::create();
-    if (node != NULL) {
-        pScene->addChild(node);
-    }
-    ccbReader->release();
-    
-    // run
-    CCDirector::sharedDirector()->replaceScene(pScene);
+    // バトルページヘ
+    BattleLayer::init_page();
 }
 
 void MenuLayer::tappedDeckButton(CCObject* pSender, CCControlEvent pCCControlEvent)

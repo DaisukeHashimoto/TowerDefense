@@ -202,6 +202,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		8E40C86117B1D53F00E01C4A /* MenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E40C85F17B1D53F00E01C4A /* MenuLayer.cpp */; };
 		8E40C86617B1F25E00E01C4A /* BattleLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E40C86417B1F25E00E01C4A /* BattleLayer.cpp */; };
+		8E40C86C17B2C06800E01C4A /* TapSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E40C86A17B2C06800E01C4A /* TapSprite.cpp */; };
 		8EBC98E417B09B4B0031E402 /* BattleLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC98DE17B09B4B0031E402 /* BattleLayer.ccbi */; };
 		8EBC98E517B09B4B0031E402 /* fileLookup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC98DF17B09B4B0031E402 /* fileLookup.plist */; };
 		8EBC98E617B09B4B0031E402 /* MenuLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 8EBC98E017B09B4B0031E402 /* MenuLayer.ccbi */; };
@@ -639,6 +640,8 @@
 		8E40C86417B1F25E00E01C4A /* BattleLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BattleLayer.cpp; path = ../Classes/BattleLayer.cpp; sourceTree = "<group>"; };
 		8E40C86517B1F25E00E01C4A /* BattleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleLayer.h; path = ../Classes/BattleLayer.h; sourceTree = "<group>"; };
 		8E40C86717B1F28100E01C4A /* BattleLayerLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleLayerLoader.h; path = ../Classes/BattleLayerLoader.h; sourceTree = "<group>"; };
+		8E40C86A17B2C06800E01C4A /* TapSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TapSprite.cpp; path = ../Classes/TapSprite.cpp; sourceTree = "<group>"; };
+		8E40C86B17B2C06800E01C4A /* TapSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TapSprite.h; path = ../Classes/TapSprite.h; sourceTree = "<group>"; };
 		8EBC98DE17B09B4B0031E402 /* BattleLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BattleLayer.ccbi; sourceTree = "<group>"; };
 		8EBC98DF17B09B4B0031E402 /* fileLookup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fileLookup.plist; sourceTree = "<group>"; };
 		8EBC98E017B09B4B0031E402 /* MenuLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; path = MenuLayer.ccbi; sourceTree = "<group>"; };
@@ -1182,6 +1185,8 @@
 				8E40C86417B1F25E00E01C4A /* BattleLayer.cpp */,
 				8E40C86517B1F25E00E01C4A /* BattleLayer.h */,
 				8E40C86717B1F28100E01C4A /* BattleLayerLoader.h */,
+				8E40C86A17B2C06800E01C4A /* TapSprite.cpp */,
+				8E40C86B17B2C06800E01C4A /* TapSprite.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -1764,6 +1769,7 @@
 				1A9CE89A1765A12C000E3062 /* CCInputDelegate.cpp in Sources */,
 				8E40C86117B1D53F00E01C4A /* MenuLayer.cpp in Sources */,
 				8E40C86617B1F25E00E01C4A /* BattleLayer.cpp in Sources */,
+				8E40C86C17B2C06800E01C4A /* TapSprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

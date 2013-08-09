@@ -24,6 +24,7 @@ class BattleLayer : public CCLayer, public CCBSelectorResolver
     void tappedMenuButton(CCObject* pSender, CCControlEvent pCCControlEvent);
     
 public:
+    static void init_page();
     CCB_STATIC_NEW_AUTORELEASE_OBJECT_WITH_INIT_METHOD(BattleLayer, create);
 };
 
